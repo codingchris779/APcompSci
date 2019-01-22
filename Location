@@ -10,9 +10,11 @@ public class Location
   public int getColumn(){return column;}
   public int multiply;
   public static int distance(Location loc1, Location loc2){
-   
-    return (Math.abs(loc1.getColumn()-loc2.getColumn())+Math.abs(loc1.getRow()-loc2.getRow()));}
-  
+   if (Math.abs(loc1.getColumn()-loc2.getColumn())>Math.abs(loc1.getRow()-loc2.getRow()))
+    return (Math.abs(loc1.getColumn()-loc2.getColumn())-Math.abs(loc1.getRow()-loc2.getRow())+Math.abs(loc1.getRow()-loc2.getRow()));}
+  else
+    return (Math.abs(loc1.getColumn()-loc2.getColumn())+Math.abs(loc1.getRow()-loc2.getRow()-Math.abs(loc1.getColumn()-loc2.getColumn()))
+    return 
   public static void main(String[] args)
   {
 Location loc1 = new Location(1,4);
